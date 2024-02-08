@@ -24,22 +24,28 @@
                         <input type="text" id="last" name="last_name" placeholder="Doe">
                     </div>
                 </div>
+            <button name="clear">Clear</button>
             <p></p>
             <p class="hidden"></p>
         </div>
     </div>
 <script>
+    const clearButton = document.querySelector('[name="clear"]');
     const firstName = document.getElementById('first');
     const lastName = document.getElementById('last');
     const full = document.querySelector('p');
-
 
 
     firstName.addEventListener('change', function(e){
         let first = firstName.value;
         let last = lastName.value;
         let fullName = `Hello ${first} ${last}!`;
-        full.textContent = fullName;
+        if (fullName.length>1){
+            full.classList.remover("hidden")
+        } else{
+            full.classList.add("hidden")
+        }
+        full.textContent = `Hello ${fullName}!`;
     });
     lastName.addEventListener('change', function(e){
         let first = firstName.value;
@@ -47,6 +53,11 @@
         let fullName = `Hello ${first} ${last}!`;
         full.textContent = fullName;
     });
+    clearButton.addEventListener('click', function(e){
+        firstName.value = "";
+        lastName.value = "";
+        full.textContent = "";
+    })
 </script>
 </body>
 </html>
