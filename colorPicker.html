@@ -50,8 +50,8 @@
 <script>
     const content = document.querySelector('.content');
     const red = document.getElementById('1');
-    const green = document.getElementById('3');
-    const blue = document.getElementById('6');
+    const green = document.getElementById('2');
+    const blue = document.getElementById('3');
 
     const pink = document.getElementById('4');
     const teal = document.getElementById('5');
@@ -63,6 +63,25 @@
         content.classList.add('red');
     });
 
+    green.addEventListener('click', function(e){
+       content.classList.add('green');
+    });
+
+    blue.addEventListener('click', function(e){
+        content.classList.add('blue');
+    });
+
+    pink.addEventListener('click', function(e){
+        content.classList.add('pink');
+    });
+
+    teal.addEventListener('click', function(e){
+        content.classList.add('teal');
+    });
+
+    purple.addEventListener('click', function(e){
+        content.classList.add('purple');
+    });
 </script>
 </body>
 </html>
