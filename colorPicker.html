@@ -37,6 +37,7 @@
             <button id="1">RED</button>
             <button id="2">GREEN</button>
             <button id="3">BLUE</button>
+            <button id="7"></button>
         </div>
         <div class="row">
             <h3>Text</h3>
@@ -89,6 +90,10 @@
         content.classList.add('purple');
     });
 
+    clearButton.addEventListener('click', function(e){
+        removeTextColor();
+        removeBGColor();
+    })
     function removeBGColor(){
         content.classList.remove('red');
         content.classList.remove('green');
