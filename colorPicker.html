@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .red{
+            background-color:red;
+        }
+        .green{
+            background-color:green;
+        }
+        .blue{
+            background-color:blue;
+        }
+        .pink{
+            color:pink;
+        }
+        .teal{
+            color:teal;
+        }
+        .purple{
+            color:purple;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -38,6 +58,10 @@
     const purple = document.getElementById('6');
 
     const clearButton = document.getElementById('clear');
+
+    red.addEventListener('click', function(e){
+        content.classList.add('red');
+    });
 
 </script>
 </body>
