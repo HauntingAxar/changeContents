@@ -14,6 +14,12 @@
         .blue{
             background-color:blue;
         }
+        .brown{
+            background-color:saddlebrown;
+        }
+        .orange{
+            background-color:darkorange;
+        }
         .pink{
             color:pink;
         }
@@ -22,6 +28,9 @@
         }
         .purple{
             color:purple;
+        }
+        .white{
+            color:white;
         }
     </style>
 </head>
@@ -37,13 +46,15 @@
             <button id="1">RED</button>
             <button id="2">GREEN</button>
             <button id="3">BLUE</button>
-            <button id="7"></button>
+            <button id="7">BROWN</button>
+            <button id="9">ORANGE</button>
         </div>
         <div class="row">
             <h3>Text</h3>
             <button id="4">PINK</button>
             <button id="5">TEAL</button>
             <button id="6">PURPLE</button>
+            <button id="8">WHITE</button>
         </div>
         <button id="clear">CLEAR</button>
     </div>
@@ -53,10 +64,13 @@
     const red = document.getElementById('1');
     const green = document.getElementById('2');
     const blue = document.getElementById('3');
+    const brown = document.getElementById('7');
+    const orange = document.getElementById('9');
 
     const pink = document.getElementById('4');
     const teal = document.getElementById('5');
     const purple = document.getElementById('6');
+    const white = document.getElementById('8');
 
     const clearButton = document.getElementById('clear');
 
@@ -75,6 +89,16 @@
         content.classList.add('blue');
     });
 
+    brown.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('brown');
+    });
+
+    orange.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('orange');
+    })
+
     pink.addEventListener('click', function(e){
         removeTextColor();
         content.classList.add('pink');
@@ -90,6 +114,11 @@
         content.classList.add('purple');
     });
 
+    white.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('white');
+    });
+
     clearButton.addEventListener('click', function(e){
         removeTextColor();
         removeBGColor();
@@ -98,12 +127,15 @@
         content.classList.remove('red');
         content.classList.remove('green');
         content.classList.remove('blue');
+        content.classList.remove('brown');
+        content.classList.remove('orange');
     }
 
     function removeTextColor(){
         content.classList.remove('pink');
         content.classList.remove('teal')
         content.classList.remove('purple');
+        content.classList.remove('white');
     }
 </script>
 </body>

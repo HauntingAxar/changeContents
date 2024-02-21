@@ -30,7 +30,6 @@ fieldset{
     padding: 12px;
 }
 
-
 fieldset legend{
     font-size: 14px;
     color: #374151;
@@ -68,7 +67,7 @@ section header{
     background: white;
     padding: 20px;
     border-radius: 12px;
-    width: 500px;
+    width: 900px;
 }
 .center{
     display: flex;
