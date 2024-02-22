@@ -27,6 +27,22 @@
   const content = document.querySelector('.content');
   const bg = document.getElementById('bg');
   const txt = document.getElementById('txt');
+  const clear = document.getElementById('clear');
+
+  bg.addEventListener('change', function(e){
+    content.style.backgroundColor = e.target.value;
+  });
+
+  txt.addEventListener('change', function(e){
+    content.style.color=e.target.value;
+  });
+
+  clear.addEventListener('click', function(e){
+    content.style.backgroundColor = 'white';
+    bg.value = '#FFFFFF'
+    content.style.color = 'black';
+    txt.value = '#000000'
+  });
 
 </script>
 </body>
