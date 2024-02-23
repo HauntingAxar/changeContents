@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+      <h3>What Is This?</h3>
+      <h4>I dont want this</h4>
+    </div>
+</div>
+<script>
+  const content = document.querySelector('.content');
+  //Replace contents of an html tag using innerHTML
+  content.innerHTML = '<h1>I love Lethal Company</h1><h4>I really love music</h4>';
+
+  // add a new element in addition to existing elements
+  const zelda = document.createElement('h1');
+  zelda.innerHTML = 'I love Zelda';
+  content.appendChild(zelda);
+
+  //put this at the top in addition to existing elements
+  const food = document.createElement('h1');
+  food.innerHTML = 'I love Pizza';
+  content.insertAdjacentElement('afterend', food);
+
+  const name = document.createElement('h3');
+  name.innerHTML = 'My name is Axar';
+  content.appendChild(name);
+
+  const song = document.createElement('h2')
+  song.innerHTML = 'My favorite song is Rosa Pastel';
+  content.appendChild(song);
+
+  const animal = document.createElement('h4');
+  animal.innerHTML = 'My favorite animal is a fox';
+  content.appendChild(animal);
+</script>
+</body>
+</html>
