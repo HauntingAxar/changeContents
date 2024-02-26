@@ -15,7 +15,7 @@
 <script>
   const content = document.querySelector('.content');
   //Replace contents of an html tag using innerHTML
-  content.innerHTML = '<h1>I love Lethal Company</h1><h4>I really love music</h4>';
+  content.innerHTML = '<h1 class="gone">I love Lethal Company</h1><h4>I really love music</h4>';
 
   // add a new element in addition to existing elements
   const zelda = document.createElement('h1');
@@ -26,6 +26,10 @@
   const food = document.createElement('h1');
   food.innerHTML = 'I love Pizza';
   content.insertAdjacentElement('afterend', food);
+
+  //to remove an element
+  const unwantedElement = document.querySelector('h4');
+  unwantedElement.remove();
 
   const name = document.createElement('h3');
   name.innerHTML = 'My name is Axar';
@@ -38,6 +42,8 @@
   const animal = document.createElement('h4');
   animal.innerHTML = 'My favorite animal is a fox';
   content.appendChild(animal);
+  const unwantedElement2 = document.querySelector('.gone');
+  unwantedElement2.remove();
 </script>
 </body>
 </html>
