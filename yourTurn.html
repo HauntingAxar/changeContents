@@ -3,11 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello Message</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h4>This site will have two text inputs and a button, the two text inputs
-are for the users first and last name and the button creates a hello message
-with both their first and last names. The names should be able to clear
-unless the user clicks "clear" then the names can stack.</h4>
+<div class="container">
+    <div class="content">
+        <h3>This site will print a "Hello!" message with your first and last name!</h3>
+        <div class="row">
+            <div>
+                <label for="first">First Name</label>
+                <input type="text" id="first" name="first_name" placeholder="Melanie">
+            </div>
+            <div>
+                <label for="last">Last Name</label>
+                <input type="text" id="last" name="last_name" placeholder="Martinez">
+            </div>
+        </div>
+        <button name="clear">Clear</button>
+        <button id="specialButton" name="hello">Say Hello!</button>
+        <div id="names"></div>
+    </div>
+</div>
+<script>
+    const clearButton = document.querySelector('[name="clear"]');
+    const firstName = document.getElementById('first');
+    const lastName = document.getElementById('last');
+    const full = document.getElementById('names');
+    const helloButton = document.getElementById('specialButton');
+
+    clearButton.addEventListener('click', function(e){
+        firstName.value = " ";
+        lastName.value = " ";
+        full.textContent = " ";
+    })
+
+    helloButton.addEventListener('click', helloMessage)
+
+    function helloMessage(){
+
+        let first = firstName.value;
+        let last = lastName.value;
+        let fullName = `Hello ${first} ${last}`;
+        const ele = document.createElement('h4');
+        ele.innerHTML = fullName;
+        full.appendChild(ele);
+        firstName.value = " ";
+        lastName.value = " ";
+    }
+
+</script>
 </body>
 </html>
