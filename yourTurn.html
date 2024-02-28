@@ -40,10 +40,9 @@
     helloButton.addEventListener('click', helloMessage)
 
     function helloMessage(){
-
         let first = firstName.value;
         let last = lastName.value;
-        let fullName = `Hello ${first} ${last}`;
+        let fullName = `Hello ${first} ${last}!`;
         const ele = document.createElement('h4');
         ele.innerHTML = fullName;
         full.appendChild(ele);
