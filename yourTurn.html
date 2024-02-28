@@ -45,9 +45,9 @@
         let fullName = `Hello ${first} ${last}!`;
         const ele = document.createElement('h4');
         ele.innerHTML = fullName;
-        full.appendChild(ele);
         firstName.value = " ";
         lastName.value = " ";
+        full.insertAdjacentElement('afterbegin', ele);
     }
 
 </script>
