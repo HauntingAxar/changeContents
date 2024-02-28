@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grocery List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h3>Make your grocery list here!</h3>
+        <div class="row">
+            <div>
+                <label for="item">Item</label>
+                <input type="text" id="item" name="Item" placeholder="Milk">
+            </div>
+        </div>
+        <button id="specialButton" name="hello">Add Item</button>
+        <div id="addingItem"></div>
+    </div>
+</div>
+<script>
+    const itemButton = document.getElementById('specialButton');
+    const myList = document.querySelector('ul');
+
+    itemButton.addEventListener('click', addItem)
+
+    function addItem(){
+        let newElement = document.createElement('li');
+        newElement.addEventListener('click', function(e){
+            //IDK WHAT TO PUT HERE OMGGGGGGGGGGGGGGGGGG
+        });
+        myList.appendChild(newElement);
+    }
+
+</script>
+</body>
+</html>
