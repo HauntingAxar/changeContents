@@ -24,13 +24,14 @@
     const itemButton = document.getElementById('specialButton');
     const myList = document.querySelector('ul');
     const collectData = document.getElementById('item');
+    const clearButton = document.getElementById('clear');
 
     itemButton.addEventListener('click', addItem)
 
     clearButton.addEventListener('click', function(e){
         collectData.value = " ";
         myList.value = " ";
-        newItem.value = " ";
+        myList.innerHTML = "";
     })
 
 
