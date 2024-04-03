@@ -34,10 +34,12 @@
         myList.innerHTML = "";
     })
 
-
     function addItem(){
         let itemName = collectData.value;
         let newItem = document.createElement('li');
+        newItem.addEventListener('click', function (){
+            newItem.remove();
+        });
         newItem.innerText = itemName;
         myList.insertAdjacentElement('afterbegin', newItem);
         collectData.value = " ";
